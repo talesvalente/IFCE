@@ -1,12 +1,3 @@
-/*
-Implemente uma lista de inteiros, em um vetor de 10 posições, que permita as seguintes operações:
-1. AdicionaInicio(int valor)
-2. AdicionaFim(int valor)
-3. AdicionaMeio(int valor, int posicao)
-4. RemoveInicio()
-5. RemoveFim()
-6. RemovePosicao(int posicao)
-*/
 import Foundation
 
 var list = [0,1,2,3,4,5,6,7,8,9]
@@ -19,18 +10,14 @@ func checkList() {
     }  
 }
 func adicionaInicio(value: Int) -> [Int] {
-    checkList()
-    list.insert(value, at: 0)
+    list[0] = value
     return list
 }
 func adicionaFim(value: Int) -> [Int] {
-    checkList()
-    list.append(value)
+    list[9] = value
     return list
 }
 func adicionaMeio(value: Int, position: Int) -> [Int] {
-    //checkList() NOT NEEDED ?
-    //list.insert(value, at: position)
     list[position] = value;
     return list
 }
@@ -49,7 +36,7 @@ func removePosicao(value: Int) -> [Int] {
 
 print(adicionaInicio(value: 1))
 print(adicionaFim(value: 2))
-print(adicionaMeio(value: 500, position: 5)) //CHECK POSITION (IF POSITION > list.count TRY CATCH)
+print(adicionaMeio(value: 500, position: 5))
 print(removeInicio())
 print(removeFim())
-print(removePosicao(value: 8))
+print(removePosicao(value: 3))
